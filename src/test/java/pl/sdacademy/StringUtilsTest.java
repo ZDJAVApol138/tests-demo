@@ -100,7 +100,7 @@ public class StringUtilsTest {
 
     public static Stream<Arguments> capitalizeParamsProvider() {
         return Stream.of(
-//                String expected, String text
+//                String expected, String input
                 Arguments.of("Sue", "sue"),
                 Arguments.of("Bob", "bob"),
                 Arguments.of("Kate", "kate"),
@@ -130,7 +130,7 @@ public class StringUtilsTest {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"Sue,Sue", "Bob,bob"})
+    @CsvSource(value = {"Sue,sue", "Bob,bob"})
     void testCapitalize3(String expected, String input) {
         // when
         final String actual = StringUtils.capitalize(input);
